@@ -1,0 +1,3 @@
+[submodule "MeshCoder"]
+	path = MeshCoder
+	url = git@github.com:DaiBingquan/MeshCoder.git
