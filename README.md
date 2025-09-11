@@ -1,2 +1,3 @@
-This is the source codes for Hoyt Xu's webpage. Tap https://hoytxu.github.io to visit the webpage.
-Powered by source code from Jon Barron's website: https://jonbarron.info/
+This is the source codes for Hoyt Xu's webpage. Tap https://hoytxu.me to visit the webpage.
+Source code template from Jon Barron's website: https://jonbarron.info/
+And I also got a lot of inspiration from Fredo's page https://people.csail.mit.edu/fredo/ 
