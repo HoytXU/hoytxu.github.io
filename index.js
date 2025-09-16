@@ -1,7 +1,7 @@
 // Portfolio dynamic image functionality
 class ProfileImageManager {
     constructor() {
-        this.selfieCount = 12; // Total number of selfie images (1.jpg to 12.jpg)
+        this.selfieCount = 10; // Total number of selfie images (1.jpg to 10.jpg)
         this.currentImageIndex = null;
         this.profileImage = null;
         
