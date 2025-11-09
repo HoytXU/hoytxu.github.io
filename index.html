@@ -1,321 +1,252 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="author" content="Hao(Hoyt) Xu">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <meta name="description" content="Hoyt">
-    <meta name="keywords" content="Hao(Hoyt) Xu">
-  
-    <title>Hao(Hoyt) Xu</title>
+<head>
+  <meta charset="UTF-8">
+  <title>Hao(Hoyt) Xu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Add Inter font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <script src="index.js"></script>
-  
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1KFER31CC"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-J1KFER31CC');
+    // Random selfie (put images at images/selfies/1.jpg ... 11.jpg)
+    // I read this feature from Fredo Durand's homepage: https://people.csail.mit.edu/fredo/ 
+    // I modified it a bit to prevent mass-preloading and enhance efficiency. 
+    // You can go to his homepage and press F12 to see the source code.   
+    const selfies = [
+        "images/selfies/1.jpg",
+        "images/selfies/2.jpg",
+        "images/selfies/3.jpg",
+        "images/selfies/4.jpg",
+        "images/selfies/5.jpg",
+        "images/selfies/6.jpg",
+        "images/selfies/7.jpg",
+        "images/selfies/8.jpg",
+        "images/selfies/9.jpg",
+        "images/selfies/10.jpg",
+        "images/selfies/11.jpg"
+    ];
+    const selected = selfies[Math.floor(Math.random() * selfies.length)];
+    const preload = new Image();
+    preload.src = selected;
+    window.__PROFILE_SRC__ = selected;
     </script>
-  </head>
 
-  <body>
-    <table style="width:110%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-      <tbody>
-        <tr style="padding:0px">
-          <td style="padding:0px">
-            <table style="width:110%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-              <tbody>
-                <tr style="padding:0px">
-                  <td style="padding:2.5%;width:63%;vertical-align:middle">
-                    <p style="text-align:center">
-                      <name>Hao(Hoyt) Xu</name>
-                    </p>
-                    <br>
-                    <p>
-                      Hi, I am Hao Xu, a 1st-year MPhil student at HKUST-GZ. Before that, I did a research internship at Shanghai AI lab, mentored by <a href="https://zhaoyanglyu.github.io/">Dr. Zhaoyang Lyu</a> in <a href="https://idc-sh.github.io/"> IDC Lab</a>. 
-                    </p>
-                    <p>
-                      Previously, I obtained my B.E. degree from Sun Yat-sen University in June 2024. I worked with <a href="https://kezewang.com/">Prof. Keze Wang</a> on Visual Question Answering in <a href="https://www.sysu-hcp.net/"> HCP Lab</a>.
-                    </p>
-                    <p>
-                      Right now, I'm actively exploring <a href="https://hoytxu.me/cg-research-map">Computer Graphics</a>, Computer Vision, and Embodied AI. Before long, I would decide my long-term research direction, and start a PhD journey.
-                    </p>
-                    <p>
-                      I maintain a <a href="https://blog.hoytxu.me"> blog</a> for my life. It's mainly about things I'm learning, projects I'm exploring, and random notes that I feel worth saving. you might get something useful there.
-                    </p>
-                    <p style="text-align:center">
-                      <a href="hxu447@connect.hkust-gz.edu.cn">Email</a> &nbsp|&nbsp
-                      <a href="data/Xu Hao.pdf">CV(Sep. 2025)</a> &nbsp|&nbsp
-                      <a href="https://blog.hoytxu.me">Blog</a> &nbsp|&nbsp
-                      <!-- <a href="https://scholar.google.com/citations?user=JCV9BQ0AAAAJ&hl=en">Google Scholar</a> &nbsp|&nbsp -->
-                      <a href="https://github.com/HoytXU">Github</a>
-                    </p>
-                  </td>
-                  <td style="padding:2.5%;width:50%;max-width:50%">
-                    <div>
-                        <img id="profile-image" style="width:100%;max-width:100%;object-fit: cover;" alt="profile photo" class="hoverZoomLink">
-                    </div>
-             </table>
 
-            <p>
-              <hr>
-            </p>
+</head>
 
-            <!-- Glimpse into my blog section -->
-            <table width="110%" align="center" border="0" margin="0" cellspacing="0" cellpadding="20">
-                <tbody>
-                    <tr>
-                        <td style="padding-top:0; padding-bottom:0;">
-                            <heading>Blog Notes</heading>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+<body>
 
-            <table width="110%" align="center" border="0" margin="0" cellspacing="0" cellpadding="20">
-                <tbody>
-                    <tr>
-                        <td style="padding-top:0; padding-bottom:0;">
-                          <p>I'm trying to be resourceful in some of my blog notes. And I put them here for the public's reference. </p>
-                          
-                          <br>
-                          
-                          <p>
-                            <img src="images/cornell_box.jpg" alt="Research Map" width="15%" align="left" style="margin-right:10px;">
-                            <b><a href="https://hoytxu.me/cg-research-map/">Computer Graphics Research Map</a></b><br> 
-                            – From the seminal work Sketchpad in computer graphics, through the evolution of its various subfields, and up to the latest neural-based approaches, this is a curated collection of materials on computer graphics viewed from an archaeological perspective
-                          </p>
-                        </td>
-                      </tr>
-                      
-                      <br>
-                      
-                      <tr>
-                        <td style="padding-top:0; padding-bottom:0;">
-                          <p>
-                            <img src="images/cs_courses.jpg" alt="Learning Notes" width="15%" align="left" style="margin-right:10px;">
-                            <b><a href="https://blog.hoytxu.me/quality-cs-self-study-resources">CS Learning Resources</a></b><br> 
-                            – For mainland Chinese students, we often find the textbooks outdated and hard to understand. Many of us definitely have the ability and determination to learn things well, it's just that we need to find the right resources, but nobody ever told us where and how. Here I share some of my own collected resources, as a guidance for all others on the same path.
-                          </p>
-                         
-                          <br>
-                         
-                          <p style="clear:both;">
-                            See also more entries on my <a href="https://blog.hoytxu.me">blog homepage</a>.
-                          </p>
+<!-- bio -->
+<table width="70%" align="center" cellpadding="20" cellspacing="0">
+  <tr>
+    <td width="70%" valign="top">
+    <h1 align="center">Hao(Hoyt) Xu</h1>
+      <p>
+        Hi, I am Hao Xu, a 1st-year MPhil student at HKUST-GZ. Before that, I did a research internship at Shanghai AI lab, mentored by <a href="https://zhaoyanglyu.github.io/">Dr. Zhaoyang Lyu</a> in <a href="https://idc-sh.github.io/"> IDC Lab</a>. 
+      </p>
+      <p>
+        Previously, I obtained my B.E. degree from Sun Yat-sen University in June 2024. I worked with <a href="https://kezewang.com/">Prof. Keze Wang</a> on Visual Question Answering in <a href="https://www.sysu-hcp.net/"> HCP Lab</a>.
+      </p>
+      <p>
+        Right now, I'm actively exploring <a href="https://hoytxu.me/cg-research-map">Computer Graphics</a>, Computer Vision, and Embodied AI. Before long, I would decide my long-term research direction, and start a PhD journey.
+      </p>
+      <p>
+        I maintain a <a href="https://blog.hoytxu.me"> blog</a> for my life. It's mainly about things I'm learning, projects I'm exploring, and random notes that I feel worth saving. you might get something useful there.
+      </p>
 
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-         
-          <p>
-            <hr>
-          </p>
+      <p align="center">
+        <a href="mailto:hxu447@connect.hkust-gz.edu.cn">Email</a> |
+        <a href="data/Xu Hao.pdf">CV(Sep. 2025)</a> |
+        <a href="https://blog.hoytxu.me">Blog</a> |
+        <a href="https://github.com/HoytXU">Github</a>
+      </p>
 
-          <table style="width:110%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-              <tbody>
-                <tr>
-                  <td style="padding:20px;width:110%;vertical-align:middle">
-                    <heading>Publications</heading>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+    </td>
+    <td width="30%" align="center">  
+      <img id="profile-image" alt="profile photo" loading="lazy" decoding="async" width="100%">
+      <script>
+        document.getElementById("profile-image").src = window.__PROFILE_SRC__;
+      </script>
+    </td>
+  </tr>
+</table>
 
-            <table style="width:110%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-              <tbody>
+<hr width="70%">
 
-                <!-- MeshCoder: LLM-Powered Structured Mesh Code Generation from Point Clouds -->
-                <tr>
-                  <td style="padding:20px;width:40%;vertical-align:left">
-                    <div class="media-container">
-                        <img src="gifs/meshcoder.gif" alt="MeshCoder demo" />
-                    </div>
-                  </td>
-                  <td style="padding:20px;width:60%;vertical-align:middle">
-                    <papertitle><a href="https://daibingquan.github.io/MeshCoder/">MeshCoder: LLM-Powered Structured Mesh Code Generation from Point Clouds</a></papertitle>
-                    <br>
-                    <br>
-                    <paper>
-                      Bingquan Dai*, Li Ray Luo*, Qihong Tang, Jie Wang, Xinyu Lian, <strong>Hao Xu</strong>, Minghan Qin, Xudong Xu, Bo Dai, Haoqian Wang, Zhaoyang Lyu†, Jiangmiao Pang
-                    </paper>
-                    <br>
-                    <p>NeurIPS 2025.</p>
-                    <a href="https://arxiv.org/abs/2508.14879">[arXiv]</a>
-                    <a href="https://daibingquan.github.io/MeshCoder">[project page]</a>
-                    <a href="https://youtu.be/WUtEcywwUPks">[video]</a>
-                    <a href="https://github.com/ZhaoyangLyu/MeshCoder">[code]</a>
-                    <br>
-                    <paper>A novel framework that reconstructs complex 3D objects from point clouds into editable Blender Python scripts using multimodal large language models.</paper>
-                  </td>
-                </tr>
+<!-- Blog Notes -->
+<table width="70%" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="left"><h2>Blog Notes</h2></td>
+  </tr>
 
-              </tbody>
-            </table>
+  <tr>
+    <td>
+      <p>I'm trying to be resourceful in some of my blog notes. And I put them here for the public's reference. </p>
+      <br>
+      <p>
+        <img src="images/cornell_box.jpg" alt="Research Map" width="120" align="left" style="margin-right:10px;">
+        <b><a href="https://hoytxu.me/cg-research-map/">Computer Graphics Research Map</a></b><br>
+        – From the seminal work Sketchpad in computer graphics, through the evolution of its various subfields, and up to the latest neural-based approaches, this is a curated collection of materials on computer graphics viewed from an archaeological perspective
+      </p>
+      <br clear="all">
+      <p>
+        <img src="images/cs_courses.jpg" alt="Learning Notes" width="120" align="left" style="margin-right:10px;">
+        <b><a href="https://blog.hoytxu.me/quality-cs-self-study-resources">CS Learning Resources</a></b><br>
+        – For mainland Chinese students, we often find the textbooks outdated and hard to understand. Many of us definitely have the ability and determination to learn things well, it's just that we need to find the right resources, but nobody ever told us where and how. Here I share some of my own collected resources, as a guidance for all others on the same path.
+      </p>
+      <br clear="all">
+      <p style="clear:both;">
+        See also more entries on my <a href="https://blog.hoytxu.me">blog homepage</a>.
+      </p>
+    </td>
+  </tr>
+</table>
 
-            <p>
-              <hr>
-            </p>
+<hr width="70%">
 
-            <table style="width:110%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-              <tbody>
-                <tr>
-                  <td style="padding:20px;width:110%;vertical-align:middle">
-                    <heading>Projects</heading>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+<!-- Publications -->
+<table width="70%" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+    <td align="left"><h2>Publications</h2></td>
+    </tr>
+    
+    <tr>
+    <td width="40%" valign="top" align="left">
+      <img src="gifs/meshcoder.gif" alt="MeshCoder demo" width="70%">
+    </td>
+    <td width="70%" valign="middle">
+      <b><a href="https://daibingquan.github.io/MeshCoder/">MeshCoder: LLM-Powered Structured Mesh Code Generation from Point Clouds</a></b>
+      <br><br>
+      <paper>
+        Bingquan Dai*, Li Ray Luo*, Qihong Tang, Jie Wang, Xinyu Lian, <strong>Hao Xu</strong>, Minghan Qin, Xudong Xu, Bo Dai, Haoqian Wang, Zhaoyang Lyu†, Jiangmiao Pang
+      </paper>
+      <br>
+      <p>NeurIPS 2025.</p>
+      <a href="https://arxiv.org/abs/2508.14879">[arXiv]</a>
+      <a href="https://daibingquan.github.io/MeshCoder">[project page]</a>
+      <a href="https://youtu.be/WUtEcywwUPks">[video]</a>
+      <a href="https://github.com/ZhaoyangLyu/MeshCoder">[code]</a>
+      <br>
+      <paper>A novel framework that reconstructs complex 3D objects from point clouds into editable Blender Python scripts using multimodal large language models.</paper>
+    </td>
+  </tr>
+</table>
 
-            <table style="width:110%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-              <tbody>
+<hr width="70%">
 
-                <!-- Visual Question Answering based on Visual Programming -->
-                <tr>
-                  <td style="padding:20px;width:40%;vertical-align:left">
-                    <div class="media-container">
-                      <img src="images/visprog.png" alt="Visual Question Answering based on Visual Programming">
-                    </div>
-                  </td>
-                  <td style="padding:20px;width:60%;vertical-align:middle">
-                    <papertitle>Visual Question Answering based on Visual Programming</papertitle>
-                    <br>
-                    <br>
-                    <paper>
-                      <strong>Hao Xu</strong>,
-                      Keze Wang
-                    </paper>
-                    <br>
-                    <p>Bachelor Thesis. 2024</p>
-                    <a href="https://github.com/HoytXU/VisProg/blob/main/VISPROG.pptx">[project slides]</a>
-                    <a href="https://github.com/HoytXU/VisProg">[code]</a>
-                    <br>
-                    <paper>A neuro-symbolic approach to solve VQA tasks.</paper>
-                  </td>
-                </tr>
+<!-- Projects -->
+<table width="70%" align="center" cellpadding="0" cellspacing="0">
+  <tr><td align="left"><h2>Projects</h2></td></tr>
+</table>
 
-                <!-- Traffic Sign Recognition -->
-                <tr>
-                  <td style="padding:20px;width:40%;vertical-align:left">
-                    <div class="media-container">
-                      <img src="images/tsr.png" alt="Traffic Sign Recognition">
-                    </div>
-                  </td>
-                  <td style="padding:20px;width:60%;vertical-align:middle">
-                    <papertitle>Traffic Sign Recognition</papertitle>
-                    <br>
-                    <br>
-                    <paper>
-                      <strong>Hao Xu</strong>,
-                      GY Sun,
-                      Di Wu,
-                      TY Wu
-                    </paper>
-                    <br>
-                    <p>NUS Summer Workshop. 2023</p>
-                    <a href="https://github.com/HoytXU/TrafficSignRecongnition/blob/master/Group1_presentation_PPT-1.pdf">[Presentation slides]</a>
-                    <a href="https://github.com/HoytXU/TrafficSignRecongnition">[code]</a>
-             </table>
+<table width="70%" align="center" cellpadding="20" cellspacing="0">
+  <!-- Project 1 -->
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <img src="images/visprog.png" alt="Visual Question Answering based on Visual Programming" width="70%">
+    </td>
+    <td width="70%" valign="top">
+      <b>Visual Question Answering based on Visual Programming</b>
+      <br><br>
+      <paper><strong>Hao Xu</strong>, Keze Wang</paper>
+      <br>
+      <p>Bachelor Thesis. 2024</p>
+      <a href="https://github.com/HoytXU/VisProg/blob/main/VISPROG.pptx">[project slides]</a>
+      <a href="https://github.com/HoytXU/VisProg">[code]</a>
+      <br>
+      <paper>A neuro-symbolic approach to solve VQA tasks.</paper>
+    </td>
+  </tr>
 
-            <p>
-              <hr>
-            </p>
+  <!-- spacer between projects -->
+  <tr><td colspan="2" height="24"></td></tr>
 
-            <!-- Experience Section -->
-            <table width="110%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody>
-                <tr>
-                  <td>
-                    <heading>Experience</heading>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+  <!-- Project 2 -->
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <img src="images/tsr.png" alt="Traffic Sign Recognition" width="70%">
+    </td>
+    <td width="70%" valign="top">
+      <b>Traffic Sign Recognition</b>
+      <br><br>
+      <paper><strong>Hao Xu</strong>, GY Sun, Di Wu, TY Wu</paper>
+      <br>
+      <p>NUS Summer Workshop. 2023</p>
+      <a href="https://github.com/HoytXU/TrafficSignRecongnition/blob/master/Group1_presentation_PPT-1.pdf">[Presentation slides]</a>
+      <a href="https://github.com/HoytXU/TrafficSignRecongnition">[code]</a>
+    </td>
+  </tr>
+</table>
 
-            <div style="display: flex; justify-content: center; align-items: center; padding-top: 10px; padding-bottom: 10px">
-              <div style="display: flex; flex-direction: column; align-items: center; margin: 0 20px;">
-                <div style="height: 60px; display: flex; align-items: center;">
-                  <img src="images/PJLab.png" alt="PJLab" style="width: 80px;">
-                </div>
-                <p style="text-align: center; line-height: 1.5;">Shanghai AI Lab<br>Intern<br>Apr. 25 - Sep. 25</p>
-              </div>
-              <div style="display: flex; flex-direction: column; align-items: center; margin: 0 20px;">
-                <div style="height: 60px; display: flex; align-items: center;">
-                  <img src="images/hkustgz.jpg" alt="HKUSTGZ" style="width: 80px;">
-                </div>
-                <p style="text-align: center; line-height: 1.5;">HKUST-GZ<br>MPhil<br>Sep. 24 - Present</p>
-              </div>
-              <div style="display: flex; flex-direction: column; align-items: center; margin: 0 20px;">
-                <div style="height: 60px; display: flex; align-items: center;">
-                  <img src="images/nus.jpg" alt="NUS" style="width: 80px;">
-                </div>
-                <p style="text-align: center; line-height: 1.5;">NUS<br>Summer School<br>May. 23 - Aug. 23</p>
-              </div>
-              <div style="display: flex; flex-direction: column; align-items: center; margin: 0 20px;">
-                <div style="height: 60px; display: flex; align-items: center;">
-                  <img src="images/sysu.jpg" alt="SYSU" style="width: 80px;">
-                </div>
-                <p style="text-align: center; line-height: 1.5;">SYSU<br>B.E. in CS<br>Sep. 20 - Jun. 24</p>
-              </div>
-            </div>
+<hr width="70%">
 
-            <p>
-              <hr>
-            </p>
+<!-- Experience -->
+<table width="70%" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="left"><h2>Experience</h2></td>
+  </tr>
 
-            <table width="110%" align="center" border="0" cellspacing="0" style="padding: 20px 20px;">
-              <tbody>
-                <tr>
-                  <td>
-                    <heading>Miscellanea</heading>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+  <tr align="center" valign="top">
 
-            <table width="110%" align="center" border="0" cellspacing="0" style="padding: 0px 20px;">
-              <tbody>
-                <tr>
-                  <td>
-                    <p>
-                      My chinese name is 徐浩 and it pronouced like "shoo↑ how↓(Say “shoo” like a question, “how” like you're mad)".<br>
-                      🎮 Fun fact: I was a fan of roguelike games and survival crafting chaos. That's where I got curious about computer graphics/vision stuff. (3K+ hours on Steam, not proud — okay, maybe a little)
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+    <td>
+      <img src="images/PJLab.png" alt="PJLab" height="60"><br>
+      Shanghai AI Lab<br>
+      Intern<br>
+      Apr. 25 - Sep. 25
+    </td>
 
-            <!-- Acknowledgment for template -->
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tr>
-                <td>
-                  <br>
-                  <p align="right" style="color: gray">
-                    <font size="1.5">
-                      Copyright &copy; 2025 Hoyt<br>
-                      Template from <a href="http://www.cs.berkeley.edu/~barron/" style="color: gray"><font size="1.5">Jon Barron</font></a>
-                    </font>
-                  </p>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
+    <td>
+      <img src="images/hkustgz.jpg" alt="HKUST-GZ" height="60"><br>
+      HKUST-GZ<br>
+      MPhil<br>
+      Sep. 24 - Present
+    </td>
+
+    <td>
+      <img src="images/nus.jpg" alt="NUS" height="60"><br>
+      NUS<br>
+      Summer School<br>
+      May. 23 - Aug. 23
+    </td>
+
+    <td>
+      <img src="images/sysu.jpg" alt="SYSU" height="60"><br>
+      SYSU<br>
+      B.E. in CS<br>
+      Sep. 20 - Jun. 24
+    </td>
+
+  </tr>
+</table>
+
+<hr width="70%">
+
+<!-- Miscellanea -->
+<table width="70%" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="left"><h2>Miscellanea</h2></td>
+  </tr>
+
+  <tr>
+    <td>
+      <p>
+        My chinese name is 徐浩 and it pronouced like "shoo↑ how↓(Say “shoo” like a question, “how” like you're mad)".<br>
+        🎮 Fun fact: I was a fan of roguelike games and survival crafting chaos. That's where I got curious about computer graphics/vision stuff. (3K+ hours on Steam, not proud — okay, maybe a little)
+      </p>
+    </td>
+  </tr>
+</table>
+
+<!-- Footer -->
+<table width="70%" align="center" cellpadding="20" cellspacing="0">
+  <tr>
+    <td align="right">
+      <font size="1.5" color="gray">
+        Copyright &copy; 2025 Hoyt<br>
+        Derived from <a href="http://www.cs.berkeley.edu/~barron/" style="color: gray"><font size="1.5">Jon Barron</font> </a> and <a href="https://people.csail.mit.edu/fredo/" style="color: gray"><font size="1.5">Frédo Durand</font></a>
+      </font>
+    </td>
+  </tr>
+</table>
+
+</body>
 </html>
-
