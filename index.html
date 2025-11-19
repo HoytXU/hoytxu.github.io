@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Hao's Homepage</title>
+  <link rel="stylesheet" href="style.css">
 
     <script>
     // Random selfie (put images at images/selfies/1.jpg ... 11.jpg)
@@ -27,15 +28,6 @@
     preload.src = selected;
     window.__PROFILE_SRC__ = selected;
     </script>
-
-    <style>
-      .box {
-        padding: 0.25rem;
-        background-color: #fff;
-        border: 1px solid #dee2e6;
-        border-radius: 0.25rem;
-      }
-    </style>
 
 </head>
 
@@ -84,29 +76,43 @@
   <tr>
     <td align="left"><h2>Blog Notes</h2></td>
   </tr>
-
-  <tr>
-    <td>
-      <p>I'm trying to be resourceful in some of my blog notes. And I put them here for the public's reference. </p>
-      <br>
-      <p>
-        <img src="images/cornell_box.jpg" alt="Research Map" class="box" width="120px" align="left" style="margin-right:10px;">
-        <b><a href="https://hoytxu.me/cg-research-map/">Computer Graphics Research Map</a></b><br>
-        – From the seminal work Sketchpad in computer graphics, through the evolution of its various subfields, and up to the latest neural-based approaches, this is a curated collection of materials on computer graphics viewed from an archaeological perspective
-      </p>
-      <br clear="all">
-      <p>
-        <img src="images/cs_courses.jpg" alt="Learning Notes" class="box" width="120px" align="left" style="margin-right:10px;">
-        <b><a href="https://blog.hoytxu.me/quality-cs-self-study-resources">CS Learning Resources</a></b><br>
-        – For mainland Chinese students, we often find the textbooks outdated and hard to understand. Many of us definitely have the ability and determination to learn things well, it's just that we need to find the right resources, but nobody ever told us where and how. Here I share some of my own collected resources, as a guidance for all others on the same path.
-      </p>
-      <br clear="all">
-      <p style="clear:both;">
-        See also more entries on my <a href="https://blog.hoytxu.me">blog homepage</a>.
-      </p>
-    </td>
-  </tr>
 </table>
+
+<div style="width: 900px; margin: 0 auto;">
+  <p style="margin-bottom: 20px;">I'm trying to be resourceful in some of my blog notes. And I put them here for the public's reference.</p>
+  
+  <div class="card">
+    <table>
+      <tr>
+        <td>
+          <img src="images/cornell_box.jpg" alt="Research Map" class="box">
+        </td>
+        <td>
+          <b><a href="https://hoytxu.me/cg-research-map/">Computer Graphics Research Map</a></b><br>
+          <paper>From the seminal work Sketchpad in computer graphics, through the evolution of its various subfields, and up to the latest neural-based approaches, this is a curated collection of materials on computer graphics viewed from an archaeological perspective</paper>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <table>
+      <tr>
+        <td>
+          <img src="images/cs_courses.jpg" alt="Learning Notes" class="box">
+        </td>
+        <td>
+          <b><a href="https://blog.hoytxu.me/quality-cs-self-study-resources">CS Learning Resources</a></b><br>
+          <paper>For mainland Chinese students, we often find the textbooks outdated and hard to understand. Many of us definitely have the ability and determination to learn things well, it's just that we need to find the right resources, but nobody ever told us where and how. Here I share some of my own collected resources, as a guidance for all others on the same path.</paper>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <p style="margin-top: 20px;">
+    See also more entries on my <a href="https://blog.hoytxu.me">blog homepage</a>.
+  </p>
+</div>
 
 <hr width="900px">
 
@@ -115,31 +121,36 @@
     <tr>
     <td align="left"><h2>Publications</h2></td>
     </tr>
-    
-    <tr>
-    <td width="360px">
-      <video autoplay loop muted playsinline width="300px" alt="MeshCoder demo">
-        <source src="videos/meshcoder.mp4" type="video/mp4">
-      </video>
-      <!-- <img src="gifs/meshcoder.gif" alt="MeshCoder demo" width="300px"> -->
-    </td>
-    <td width="540px">
-      <b><a href="https://daibingquan.github.io/MeshCoder/">MeshCoder: LLM-Powered Structured Mesh Code Generation from Point Clouds</a></b>
-      <br><br>
-      <paper>
-        Bingquan Dai*, Li Ray Luo*, Qihong Tang, Jie Wang, Xinyu Lian, <strong>Hao Xu</strong>, Minghan Qin, Xudong Xu, Bo Dai, Haoqian Wang, Zhaoyang Lyu†, Jiangmiao Pang
-      </paper>
-      <br>
-      <p>NeurIPS 2025.</p>
-      <a href="https://arxiv.org/abs/2508.14879">[arXiv]</a>
-      <a href="https://daibingquan.github.io/MeshCoder">[project page]</a>
-      <a href="https://youtu.be/WUtEcywwUPks">[video]</a>
-      <a href="https://github.com/ZhaoyangLyu/MeshCoder">[code]</a>
-      <br>
-      <paper>A novel framework that reconstructs complex 3D objects from point clouds into editable Blender Python scripts using multimodal large language models.</paper>
-    </td>
-  </tr>
 </table>
+
+<div style="width: 900px; margin: 0 auto;">
+  <div class="card">
+    <table>
+      <tr>
+        <td>
+          <video autoplay loop muted playsinline alt="MeshCoder demo">
+            <source src="videos/meshcoder.mp4" type="video/mp4">
+          </video>
+        </td>
+        <td>
+          <b><a href="https://daibingquan.github.io/MeshCoder/">MeshCoder: LLM-Powered Structured Mesh Code Generation from Point Clouds</a></b>
+          <br><br>
+          <paper>
+            Bingquan Dai*, Li Ray Luo*, Qihong Tang, Jie Wang, Xinyu Lian, <strong>Hao Xu</strong>, Minghan Qin, Xudong Xu, Bo Dai, Haoqian Wang, Zhaoyang Lyu†, Jiangmiao Pang
+          </paper>
+          <br>
+          <p>NeurIPS 2025.</p>
+          <a href="https://arxiv.org/abs/2508.14879">[arXiv]</a>
+          <a href="https://daibingquan.github.io/MeshCoder">[project page]</a>
+          <a href="https://youtu.be/WUtEcywwUPks">[video]</a>
+          <a href="https://github.com/ZhaoyangLyu/MeshCoder">[code]</a>
+          <br>
+          <paper>A novel framework that reconstructs complex 3D objects from point clouds into editable Blender Python scripts using multimodal large language models.</paper>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
 
 <hr width="900px">
 
@@ -148,46 +159,54 @@
   <tr><td align="left"><h2>Projects</h2></td></tr>
 </table>
 
-<table width="900px" align="center" cellpadding="20" cellspacing="0">
+<div style="width: 900px; margin: 0 auto;">
   <!-- Project 1 -->
-  <tr>
-    <td width="360px">
-      <img src="images/visprog.png" alt="Visual Question Answering based on Visual Programming" class="box" width="75%">
-    </td>
-    <td width="480px" valign="middle">
-      <b>Visual Question Answering based on Visual Programming</b>
-      <br><br>
-      <paper><strong>Hao Xu</strong>, Keze Wang</paper>
-      <br>
-      <p>Bachelor Thesis. 2024</p>
-      <a href="https://github.com/HoytXU/VisProg/blob/main/VISPROG.pptx">[slides]</a>
-      <a href="https://github.com/HoytXU/VisProg">[code]</a>
-      <br>
-      <paper>A neuro-symbolic approach to solve VQA tasks, based on 2023 CVPR Best Paper "Visual Programming".</paper>
-    </td>
-  </tr>
+  <div class="card">
+    <table>
+      <tr>
+        <td>
+          <img src="images/visprog.png" alt="Visual Question Answering based on Visual Programming" class="box">
+        </td>
+        <td>
+          <b>Visual Question Answering based on Visual Programming</b>
+          <br><br>
+          <paper><strong>Hao Xu</strong>, Keze Wang</paper>
+          <br>
+          <p>Bachelor Thesis. 2024</p>
+          <a href="https://github.com/HoytXU/VisProg/blob/main/VISPROG.pptx">[slides]</a>
+          <a href="https://github.com/HoytXU/VisProg">[code]</a>
+          <br>
+          <paper>A neuro-symbolic approach to solve VQA tasks, based on 2023 CVPR Best Paper "Visual Programming".</paper>
+        </td>
+      </tr>
+    </table>
+  </div>
 
   <!-- Project 2 -->
-  <tr>
-    <td width="360px">
-      <img src="images/tsr.png" alt="Traffic Sign Recognition" class="box" width="75%">
-    </td>
-    <td width="480px" valign="middle">
-      <b><a href="https://github.com/HoytXU/TrafficSignRecongnition">Traffic Sign Recognition</a></b>
-      <br><br>
-      <paper><strong>Hao Xu</strong>, GY Sun, Di Wu, TY Wu</paper>
-      <br>
-      <p>NUS Summer Workshop. 2023</p>
-      <a href="https://github.com/HoytXU/TrafficSignRecongnition/blob/master/assets/slides/talk.pdf">[slides]</a>
-      <a href="https://huggingface.co/datasets/IridesParadox/TrafficSignRecognition">[dataset]</a>
-      <a href="https://huggingface.co/IridesParadox/TrafficSignRecognition_checkpoints">[checkpoints]</a>
-      <a href="https://nbviewer.org/github/HoytXU/TrafficSignRecongnition/blob/master/expert/concepts.ipynb">[visualizations]</a>
-      <a href="https://github.com/HoytXU/TrafficSignRecongnition">[code]</a>
-      <br>
-      <paper>We developed different traffic sign recognition systems based on traditional computer vision methods and machine learning methods.</paper>
-    </td>
-  </tr>
-</table>
+  <div class="card">
+    <table>
+      <tr>
+        <td>
+          <img src="images/tsr.png" alt="Traffic Sign Recognition" class="box">
+        </td>
+        <td>
+          <b><a href="https://github.com/HoytXU/TrafficSignRecongnition">Traffic Sign Recognition</a></b>
+          <br><br>
+          <paper><strong>Hao Xu</strong>, GY Sun, Di Wu, TY Wu</paper>
+          <br>
+          <p>NUS Summer Workshop. 2023</p>
+          <a href="https://github.com/HoytXU/TrafficSignRecongnition/blob/master/assets/slides/talk.pdf">[slides]</a>
+          <a href="https://huggingface.co/datasets/IridesParadox/TrafficSignRecognition">[dataset]</a>
+          <a href="https://huggingface.co/IridesParadox/TrafficSignRecognition_checkpoints">[checkpoints]</a>
+          <a href="https://nbviewer.org/github/HoytXU/TrafficSignRecongnition/blob/master/expert/concepts.ipynb">[visualizations]</a>
+          <a href="https://github.com/HoytXU/TrafficSignRecongnition">[code]</a>
+          <br>
+          <paper>We developed different traffic sign recognition systems based on traditional computer vision methods and machine learning methods.</paper>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
 
 <hr width="900px">
 
