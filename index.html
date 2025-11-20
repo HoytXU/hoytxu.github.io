@@ -24,9 +24,17 @@
         "images/selfies/11.jpg"
     ];
     const selected = selfies[Math.floor(Math.random() * selfies.length)];
+    // Preload the selected image for better LCP performance
     const preload = new Image();
     preload.src = selected;
+    // Store for immediate use in img tag
     window.__PROFILE_SRC__ = selected;
+    // Create preload link for browser hint
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = selected;
+    document.head.appendChild(link);
     </script>
 
 </head>
@@ -61,9 +69,14 @@
     </td>
 
     <td width="300px" align="center">  
-      <img id="profile-image" alt="profile photo" loading="lazy" decoding="async" width="100%">
+      <img id="profile-image" alt="profile photo" src="" width="100%">
       <script>
-        document.getElementById("profile-image").src = window.__PROFILE_SRC__;
+        // Set src immediately - browser will start loading right away
+        // Removed loading="lazy" because this is the LCP element and must load immediately
+        const profileImg = document.getElementById("profile-image");
+        if (profileImg && window.__PROFILE_SRC__) {
+          profileImg.src = window.__PROFILE_SRC__;
+        }
       </script>
     </td>
   </tr>
