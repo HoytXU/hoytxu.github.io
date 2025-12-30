@@ -78,7 +78,8 @@ paper {
 .card img, .card video {
   width: 100%;
   max-width: 300px;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
   display: block;
 }
 
