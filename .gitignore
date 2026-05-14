@@ -1,1 +1,34 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
 
+# Secrets — never commit
+*.key
+*.pem
+*.p12
+*.pfx
+*.csr
+*.der
+*.crt
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+.env
+.env.*
+*.token
+*token*.txt
+*cookie*.txt
+*secret*
+*password*
+credentials*
+*.gpg
+*.asc
+
+# Local backups
+*.bak
+*~
